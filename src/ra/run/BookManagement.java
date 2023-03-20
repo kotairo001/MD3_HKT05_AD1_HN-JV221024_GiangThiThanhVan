@@ -58,7 +58,7 @@ public class BookManagement {
                     for (int i = 0; i < listBook.size(); i++) {
                         if (listBook.get(i).getAuthor().getAuthorName().equalsIgnoreCase(authorName)) {
                             flag = true;
-                            listBook.get(i).display();
+                            listBook.get(i).displayData();
                             break;
                         }
                     }

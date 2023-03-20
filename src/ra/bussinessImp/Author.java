@@ -68,7 +68,7 @@ public class Author implements IShop {
     }
 
     @Override
-    public void display() {
+    public void displayData() {
         System.out.println("Author's ID: " + getAuthorId() + "\n"
                 + "Author's Name: " + getAuthorName() + "\n"
                 + "-------------------------");

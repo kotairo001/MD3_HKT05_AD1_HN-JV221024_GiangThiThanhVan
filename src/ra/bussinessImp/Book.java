@@ -140,7 +140,7 @@ public class Book implements IShop, Comparable<Book> {
         setBookStatus(bookStatus.equalsIgnoreCase("stock")?true:false);
         System.out.println("Choose author of the book");
         for (int i = 0; i < getAuthors().size(); i++) {
-            getAuthors().get(i).display();
+            getAuthors().get(i).displayData();
         }
         int choiceOfAuthor = Integer.parseInt(input.nextLine());
         for (int i = 0; i < getAuthors().size(); i++) {
@@ -151,7 +151,7 @@ public class Book implements IShop, Comparable<Book> {
     }
 
     @Override
-    public void display() {
+    public void displayData() {
         System.out.println("Book's ID: " + getBookId() + "\n"
                 + "Product's Name: " + getBookName() + "\n"
                 + "Author: " + getAuthor().getAuthorName() + "\n"
