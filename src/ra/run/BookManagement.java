@@ -34,13 +34,17 @@ public class BookManagement {
                     }
                     break;
                 case 2:
-                    System.out.println("Input the number of books");
-                    sizeOfBookList = input.nextInt();
-                    for (int i = 0; i < sizeOfBookList; i++) {
-                        Book book = new Book();
-                        book.setAuthors((ArrayList<Author>) listAuthor);
-                        listBook.add(book);
-                        listBook.get(i).inputData();
+                    if (listAuthor.isEmpty()) {
+                        System.out.println("Input author first");
+                    } else {
+                        System.out.println("Input the number of books");
+                        sizeOfBookList = input.nextInt();
+                        for (int i = 0; i < sizeOfBookList; i++) {
+                            Book book = new Book();
+                            book.setAuthors((ArrayList<Author>) listAuthor);
+                            listBook.add(book);
+                            listBook.get(i).inputData();
+                        }
                     }
                     break;
                 case 3:
@@ -62,7 +66,7 @@ public class BookManagement {
                             break;
                         }
                     }
-                    if (flag==false) {
+                    if (flag == false) {
                         System.err.println("Can not find the author");
                     }
                     break;
